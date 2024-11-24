@@ -29,7 +29,7 @@ jobs:
 
       - name: Copy artifact for deployment job
         run: |
-          mkdir deploy
+         mkdir deploy
           cp -r ./.next/standalone/. ./deploy
           cp -r ./public ./deploy
           cp -r ./.next/static/. ./deploy/.next/static
@@ -63,7 +63,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'tech0-gen-8-step3-testapp-node1-10'
+          app-name: 'tech0-gen-8-step3-testapp-node1-9'
           slot-name: 'Production'
           package: ./deploy
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EDAC3B217C2E463E8544D2F74BE7503B }}
